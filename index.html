@@ -15,7 +15,6 @@
     <!--Scripts-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="./asetaworld/script/redirect.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -107,6 +106,58 @@
           }
   };
       </script>
+
+      <!--Link 1-->
+    <script>
+        $('#Link1').click(function(){
+    let timerInterval
+        Swal.fire({
+    title: 'Redirecting...',
+    timer: 500,
+    timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+         const b = Swal.getHtmlContainer().querySelector('b')
+         timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+               }, 100)
+        },
+    willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ if (result.dismiss === Swal.DismissReason.timer) {
+  window.location.href = "https://instagram.com/aworldjourney._";   
+     }
+  })
+});
+    </script>
+
+<!--Link 2-->
+<script>
+    $('#Link2').click(function(){
+    let timerInterval
+        Swal.fire({
+    title: 'Redirecting...',
+    timer: 500,
+    timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+         const b = Swal.getHtmlContainer().querySelector('b')
+         timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+               }, 100)
+        },
+    willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ if (result.dismiss === Swal.DismissReason.timer) {
+  window.location.href = "";   
+     }
+  })
+});
+    </script>
 </body>
 
 </html>
