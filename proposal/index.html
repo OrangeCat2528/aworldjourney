@@ -1,7 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="1; URL=https://drive.google.com/file/d/1dYhbI15kGrp5CxZxsHSIfSd6ggtjczlD/view?usp=sharing" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!--Meta Tags-->
+   <meta name="theme-color" content="#18A558">
+   <meta property="og:title" content="Aworld Journey Proposal">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="/">
+   <meta property="og:image" content="blob:https://web.telegram.org/0f4a93db-d400-4f9c-a2b6-9ffc122756b2">
+   <meta property="og:description" content="✨ Together we Build the World by Serving the Community">
+   <title>Aworld Journey Proposal</title>
 </head>
+<body>
+    <style>
+    body {
+    background-image: url(./asetaworld/bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;}
+    </style>
+
+<script>
+function codeAddress() {
+    let timerInterval
+        Swal.fire({
+    title: 'Redirecting...',
+    timer: 200,
+    timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+         const b = Swal.getHtmlContainer().querySelector('b')
+         timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+               }, 100)
+        },
+    willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ if (result.dismiss === Swal.DismissReason.timer) {
+  window.location.href = "https://drive.google.com/file/d/1dYhbI15kGrp5CxZxsHSIfSd6ggtjczlD/view?usp=sharing";   
+     }
+  })
+}
+window.onload = codeAddress;
+    </script>
+</body>
 </html>
