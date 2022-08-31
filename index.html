@@ -38,13 +38,13 @@
             <a class="links__item links__item--past-event"
                 target="_blank">📁 Aworld Proposal</a>
         </div> 
-        <div class="links__item">
+        <div id="Link3" class="links__item">
             <a class="links__item links__item--featured"
-                target="_blank">Masih Kososng</a>
+                target="_blank">📷 Documentation</a>
         </div>
-        <div class="links__item">
+        <div id="Link4" class="links__item">
             <a class="links__item links__item--alumni" href="#"
-                target="_blank">Masih Kososng</a>
+                target="_blank">🎥 YouTube Channel</a>
         </div>
         <div class="links__item">
             <a class="links__item links__item--upcoming" href="#"
@@ -162,6 +162,58 @@
 }).then((result) => {
  if (result.dismiss === Swal.DismissReason.timer) {
   window.location.href = "https://drive.google.com/file/d/1HT-WgUWTMxytWiMZrYVJ89S5MdfSdYbm/view?usp=sharing";   
+     }
+  })
+});
+    </script>
+
+<!--Link 3-->
+<script>
+    $('#Link3').click(function(){
+    let timerInterval
+        Swal.fire({
+    title: 'Redirecting...',
+    timer: 500,
+    timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+         const b = Swal.getHtmlContainer().querySelector('b')
+         timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+               }, 100)
+        },
+    willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ if (result.dismiss === Swal.DismissReason.timer) {
+  window.location.href = "https://files.aworld.journeys.my.id";   
+     }
+  })
+});
+    </script>
+
+<!--Link 4-->
+<script>
+    $('#Link4').click(function(){
+    let timerInterval
+        Swal.fire({
+    title: 'Redirecting...',
+    timer: 500,
+    timerProgressBar: true,
+        didOpen: () => {
+            Swal.showLoading()
+         const b = Swal.getHtmlContainer().querySelector('b')
+         timerInterval = setInterval(() => {
+           b.textContent = Swal.getTimerLeft()
+               }, 100)
+        },
+    willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+ if (result.dismiss === Swal.DismissReason.timer) {
+  window.location.href = "https://www.youtube.com/channel/UCXX_xukuvV3bR-q2_poZNIQ";   
      }
   })
 });
