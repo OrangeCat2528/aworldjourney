@@ -1,3 +1,8 @@
+@font-face {
+  font-family: ArtNuvo;
+  src: url("asetaworld/font/artnuvo.otf") format("opentype");
+}
+
 html {
     box-sizing: border-box;
     font-size: 100%;
